@@ -16,7 +16,7 @@ public class AuthService {
     }
 
     public AuthResponse logIn(AuthRequest authRequest){
-        // check email and pasword here
+        // check email and password here
         User user = User.builder()
                 .id("1")
                 .email(authRequest.getEmail())
