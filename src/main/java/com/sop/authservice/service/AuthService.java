@@ -20,7 +20,7 @@ public class AuthService {
         User user = User.builder()
                 .id("1")
                 .email(authRequest.getEmail())
-                .pasword(authRequest.getPassword())
+                .password(authRequest.getPassword())
                 .role("admin")
                 .build();
         String accessToken = jwt.generate(user, "ACCESS");

@@ -17,11 +17,12 @@ public class AuthController {
 
     @Autowired
     public AuthController(final AuthService authService){
+
         this.authService = authService;
     }
 
     @PostMapping(value = "/login")
-    public ResponseEntity<AuthResponse> login(@RequestBody AuthRequest authRequest){
+    public ResponseEntity<AuthResponse> logIn(@RequestBody AuthRequest authRequest){
         return  ResponseEntity.ok(authService.logIn(authRequest));
     }
 }
